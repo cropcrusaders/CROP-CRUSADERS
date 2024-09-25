@@ -1,0 +1,39 @@
+# Site Settings
+title: My GitHub Pages Site
+description: >- # this means to break the string into multiple lines
+  A simple GitHub Pages site created using Jekyll.
+baseurl: "" # the subpath of your site, e.g. /blog (leave empty for root)
+url: "https://username.github.io" # the base hostname & protocol for your site
+theme: minima # default theme
+
+# Author Settings
+author:
+  name: John Doe
+  email: johndoe@example.com
+
+# Navigation Links (for custom navigation)
+navigation:
+  - name: Home
+    link: /
+  - name: About
+    link: /about
+  - name: Blog
+    link: /blog
+
+# Social Links (optional)
+social_links:
+  github: https://github.com/username
+  twitter: https://twitter.com/username
+
+# Markdown Configuration
+markdown: kramdown
+
+# Plugins (GitHub Pages automatically includes these by default)
+plugins:
+  - jekyll-feed # generates RSS feed
+  - jekyll-seo-tag # SEO optimization
+
+# Build Settings
+permalink: pretty # uses clean URLs without .html extension
+paginate: 5 # number of posts per page (for blogs)
+paginate_path: "/page/:num/" # URL structure for paginated pages
