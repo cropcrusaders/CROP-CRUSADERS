@@ -6,6 +6,7 @@
     <title>Crop Crusader Website</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Existing CSS styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -13,78 +14,31 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #3e3e3e;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            background-color: #333;
-            overflow: hidden;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            padding: 10px 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-        section {
+        /* ... other styles ... */
+
+        /* Open Weed Locator Section Styles */
+        #open-weed-locator {
             padding: 20px;
             margin: 10px 0;
-            background-color: white;
+            background-color: #e8f5e9; /* Light green background */
             border-radius: 5px;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #3e3e3e;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+        #open-weed-locator h2 {
+            color: #2e7d32; /* Dark green text */
         }
-        /* Forum Section */
-        #forum {
-            margin-top: 30px;
+        #open-weed-locator ul {
+            list-style-type: none;
+            padding: 0;
         }
-        #forum input, #forum textarea {
-            width: 100%;
-            padding: 10px;
+        #open-weed-locator ul li {
             margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
         }
-        #forum button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        #open-weed-locator ul li a {
+            text-decoration: none;
+            color: #1b5e20;
         }
-        #forum button:hover {
-            background-color: #45a049;
-        }
-        .comment-section {
-            margin-top: 20px;
-            background-color: #fafafa;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .comment {
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-        }
-        .comment:last-child {
-            border-bottom: none;
+        #open-weed-locator ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -98,6 +52,7 @@
         <ul>
             <li><a href="#about-crop-crusader">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#open-weed-locator">Open Weed Locator</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#forum">Forum</a></li>
         </ul>
@@ -106,7 +61,7 @@
     <!-- About Crop Crusader Section -->
     <section id="about-crop-crusader">
         <h2>About Crop Crusader</h2>
-        <p>Crop Crusader is an open-source initiative revolutionizing sustainable agriculture. By harnessing the collective power of community-driven innovation and cutting-edge technology, we aim to elevate farming to new heights. Our mission is to provide farmers with accessible tools and collaborative platforms that redefine crop management. We believe open-source collaboration is the future of farming—promoting transparency, fostering global partnerships, and enabling shared solutions to common challenges. Join us in pioneering a new era where open-source principles cultivate a healthier and more sustainable planet.</p>
+        <p>Crop Crusader is an open-source initiative revolutionizing sustainable agriculture...</p>
     </section>
 
     <!-- Projects Section -->
@@ -116,6 +71,18 @@
             <li>Project 1: Open-Source Crop Monitoring Tools</li>
             <li>Project 2: Collaborative Farming Platform</li>
             <li>Project 3: Sustainable Agriculture Technologies</li>
+        </ul>
+    </section>
+
+    <!-- Open Weed Locator Section -->
+    <section id="open-weed-locator">
+        <h2>Open Weed Locator</h2>
+        <p>Welcome to the Open Weed Locator. Here you can find resources and links related to weed identification and management.</p>
+        <ul>
+            <li><a href="weed-identification.html">Weed Identification Guide</a></li>
+            <li><a href="community-mapping.html">Community Weed Mapping</a></li>
+            <li><a href="submit-sighting.html">Submit a Weed Sighting</a></li>
+            <!-- Add more links as needed -->
         </ul>
     </section>
 
