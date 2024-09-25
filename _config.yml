@@ -4,7 +4,7 @@ description: >- # this means to break the string into multiple lines
   A simple GitHub Pages site created using Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog (leave empty for root)
 url: "https://username.github.io" # the base hostname & protocol for your site
-theme: minima # default theme
+theme: hacker # default theme
 
 # Author Settings
 author:
