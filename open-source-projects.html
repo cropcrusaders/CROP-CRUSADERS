@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Source Projects - Crop Crusader Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /* ... other styles ... */
+
+        /* Open Weed Locator Section Styles */
+        #open-weed-locator {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #e8f5e9; /* Light green background */
+            border-radius: 5px;
+        }
+        #open-weed-locator h2 {
+            color: #2e7d32; /* Dark green text */
+        }
+        #open-weed-locator ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #open-weed-locator ul li {
+            margin: 5px 0;
+        }
+        #open-weed-locator ul li a {
+            text-decoration: none;
+            color: #1b5e20;
+        }
+        #open-weed-locator ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Repositories Section Styles */
+        #repositories {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #f0f4c3; /* Light yellow background */
+            border-radius: 5px;
+        }
+        #repositories h2 {
+            color: #827717; /* Dark yellow text */
+        }
+        #repositories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #repositories ul li {
+            margin: 5px 0;
+        }
+        #repositories ul li a {
+            text-decoration: none;
+            color: #33691e;
+        }
+        #repositories ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Forum Section Styles */
+        #forum {
+            margin-top: 30px;
+        }
+        #forum input, #forum textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #forum button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #forum button:hover {
+            background-color: #45a049;
+        }
+        .comment-section {
+            margin-top: 20px;
+            background-color: #fafafa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .comment {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .comment:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Open Source Projects</h1>
+        <p>Revolutionizing Sustainable Agriculture</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="open-source-projects.html">Open Source Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add other navigation links as needed -->
+        </ul>
+    </nav>
+
+    <!-- Open Weed Locator Section -->
+    <section id="open-weed-locator">
+        <h2>Open Weed Locator</h2>
+        <p>Welcome to the Open Weed Locator. Here you can find resources and links related to weed identification and management.</p>
+        <ul>
+            <li><a href="weed-identification.html">Weed Identification Guide</a></li>
+            <li><a href="community-mapping.html">Community Weed Mapping</a></li>
+            <li><a href="submit-sighting.html">Submit a Weed Sighting</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </section>
+
+    <!-- Repositories Section -->
+    <section id="repositories">
+        <h2>Our Open Source Repositories</h2>
+        <ul>
+            <li><a href="https://github.com/yourusername/open-weed-locator" target="_blank">Open Weed Locator Repository</a></li>
+            <!-- Add more repositories as needed -->
+        </ul>
+    </section>
+
+    <!-- Forum Section -->
+    <section id="forum">
+        <h2>Forum</h2>
+        <p>Share your thoughts, questions, or insights in the forum below:</p>
+        <form id="forumForm">
+            <input type="text" id="username" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" rows="4" required></textarea>
+            <button type="button" onclick="addComment()">Submit Comment</button>
+        </form>
+        
+        <div class="comment-section" id="commentSection">
+            <!-- Comments will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Crop Crusader Website</p>
+    </footer>
+
+    <script>
+        function addComment() {
+            var username = document.getElementById('username').value;
+            var comment = document.getElementById('comment').value;
+
+            if (username && comment) {
+                var commentSection = document.getElementById('commentSection');
+
+                var newComment = document.createElement('div');
+                newComment.className = 'comment';
+                newComment.innerHTML = '<strong>' + username + ':</strong> <p>' + comment + '</p>';
+
+                commentSection.appendChild(newComment);
+
+                // Clear the form fields
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+            } else {
+                alert('Please enter your name and a comment.');
+            }
+        }
+    </script>
+</body>
+</html>
