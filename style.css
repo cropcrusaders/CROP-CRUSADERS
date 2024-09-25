@@ -1,65 +1,145 @@
+/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Old Standard TT', serif; /* A classic, western-style font */
     line-height: 1.6;
     margin: 20px;
-    background-color: #f4f4f4;
+    background-color: #F5F5DC; /* Beige background to mimic parchment paper */
 }
 
+/* Header Styles */
 header {
-    background: #333;
+    background: #8B4513; /* SaddleBrown color */
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 5px solid #A0522D; /* Sienna color for a rugged look */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-family: 'Alfa Slab One', cursive; /* Bold, slab-serif font for titles */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: #444;
-    padding: 10px 0;
+    background: #A0522D; /* Sienna color */
+    padding: 15px 0;
+    border-bottom: 3px solid #8B4513;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-family: 'Old Standard TT', serif;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Section Styles */
 section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    padding: 25px;
+    background: #FFF8DC; /* Cornsilk background for an aged paper effect */
+    border: 2px solid #D2B48C; /* Tan border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-family: 'Alfa Slab One', cursive;
+    text-align: center;
+    color: #8B4513;
+    text-shadow: 1px 1px #000;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
+    padding: 15px;
+    background: #8B4513;
     color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
+    border-top: 3px solid #A0522D;
+}
+
+/* Additional Styling */
+a {
+    color: #8B4513;
+}
+
+a:hover {
+    color: #D2691E; /* Chocolate color on hover */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+button {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Old Standard TT', serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #A0522D;
+}
+
+/* Forum Input Styles */
+#forum input, #forum textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #D2B48C;
+    border-radius: 5px;
+    background-color: #FFF8DC;
+    font-family: 'Old Standard TT', serif;
+}
+
+/* Comment Section Styles */
+.comment-section {
+    margin-top: 25px;
+    background-color: #FAEBD7; /* AntiqueWhite background */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #D2B48C;
+}
+
+.comment {
+    border-bottom: 1px dashed #D2B48C;
+    padding: 15px 0;
+}
+
+.comment:last-child {
+    border-bottom: none;
 }
