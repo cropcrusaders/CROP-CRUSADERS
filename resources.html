@@ -15,6 +15,33 @@
         }
 
         /* Reuse styles from index.html or link the same stylesheet */
+
+        /* Optional styling for the navigation links */
+        nav {
+            margin: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for sections */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        section h2, section h3 {
+            margin-top: 0;
+        }
     </style>
 </head>
 <body>
@@ -23,33 +50,49 @@
         <p>Access Tools to Empower Your Farming Practices</p>
     </header>
 
-  
- <section id="spraying resources">
-        <h2> Crop Guides Canada</h2>
-        <ul>
-             <p canadian resources </p>
-            <li><a href="https://www.albertabluebook.com/" target="_blank">Albert blue book</a></li>
-            <li><a href="https://www.saskatchewan.ca/business/agriculture-natural-resources-and-industry/agribusiness-farmers-and-ranchers/crops-and-irrigation/crop-guides-and-publications/guide-to-crop-protection" target="_blank">saskatchewan crop protection guide</a></li>
-        
-        </ul>
+    <!-- Return to Home link -->
+    <nav>
+        <a href="index.html">Return to Home</a>
+    </nav>
 
- <section id="crop guides">
-        <h2> Crop Guides Australia</h2>
+    <!-- Spraying Resources Section -->
+    <section id="spraying-resources">
+        <h2>Crop Guides Canada</h2>
+        <p>Canadian resources</p>
         <ul>
-             <p australian resources </p>
-            <li><a href="https://agriculture.vic.gov.au/__data/assets/pdf_file/0012/901101/Field-Crop-Diseases-ID-manual-2022small.pdf" target="_blank"> vic Crop Guide</a></li>
-            <li><a href="https://www.wa.gov.au/system/files/2021-08/DPIRD%20Research%20Highlights%2C%20Grains.pdf" target="_blank">west australia Crop Guide</a></li>
-        
+            <li><a href="https://www.albertabluebook.com/" target="_blank">Alberta Blue Book</a></li>
+            <li><a href="https://www.saskatchewan.ca/business/agriculture-natural-resources-and-industry/agribusiness-farmers-and-ranchers/crops-and-irrigation/crop-guides-and-publications/guide-to-crop-protection" target="_blank">Saskatchewan Crop Protection Guide</a></li>
         </ul>
+    </section>
 
-<section id="NPK">
+    <!-- Crop Guides Section -->
+    <section id="crop-guides">
+        <h2>Crop Guides Australia</h2>
+        <p>Australian resources</p>
+        <ul>
+            <li><a href="https://agriculture.vic.gov.au/__data/assets/pdf_file/0012/901101/Field-Crop-Diseases-ID-manual-2022small.pdf" target="_blank">Victoria Crop Guide</a></li>
+            <li><a href="https://www.wa.gov.au/system/files/2021-08/DPIRD%20Research%20Highlights%2C%20Grains.pdf" target="_blank">Western Australia Crop Guide</a></li>
+        </ul>
+    </section>
+
+    <!-- NPK Calculator Section -->
+    <section id="NPK">
         <h2>NPK Calculator for Manure</h2>
-         <li><a href="https://cropcrusaders.github.io/nkp-manure-calculator/" target="_blank">NPK Calculator for Manure </a></li>
-   
+        <ul>
+            <li><a href="https://cropcrusaders.github.io/nkp-manure-calculator/" target="_blank">NPK Calculator for Manure</a></li>
+        </ul>
+    </section>
 
+    <!-- Community Forums Section -->
+    <section id="community-forums">
         <h3>Community Forums:</h3>
         <p>Join our <a href="index.html#forum">forum</a> to discuss and share knowledge with fellow enthusiasts.</p>
     </section>
+
+    <!-- Return to Home link at the bottom -->
+    <nav>
+        <a href="index.html">Return to Home</a>
+    </nav>
 
     <footer>
         <p>&copy; 2024 Crop Crusader Website</p>
