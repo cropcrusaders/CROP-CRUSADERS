@@ -48,56 +48,67 @@
             border-radius: 5px;
         }
 
-        /* AgOpenGPS Section Styles */
-        #agopengps {
-            background-color: #f0f4c3; /* Light yellow background */
-        }
-        #agopengps h2 {
-            color: #827717; /* Dark yellow text */
-        }
-        #agopengps ul li {
-            margin: 10px 0;
-        }
-
-        /* Open Isobus Section Styles */
-        #open-isobus {
+        /* Auto Steer Section Styles */
+        #auto-steer {
             background-color: #e3f2fd; /* Light blue background */
         }
-        #open-isobus h2 {
+        #auto-steer h2 {
             color: #1565c0; /* Dark blue text */
         }
-        #open-isobus ul li {
+        #auto-steer ul li {
             margin: 10px 0;
         }
 
-        /* Open Weed Locator Section Styles */
-        #open-weed-locator {
+        /* Spraying Section Styles */
+        #spraying {
+            background-color: #f0f4c3; /* Light yellow background */
+        }
+        #spraying h2 {
+            color: #827717; /* Dark yellow text */
+        }
+        #spraying ul li {
+            margin: 10px 0;
+        }
+
+        /* Irrigation Section Styles */
+        #irrigation {
             background-color: #e8f5e9; /* Light green background */
         }
-        #open-weed-locator h2 {
+        #irrigation h2 {
             color: #2e7d32; /* Dark green text */
         }
-        #open-weed-locator ul li {
+        #irrigation ul li {
             margin: 10px 0;
         }
 
-        /* APSIM Section Styles */
-        #apsim {
+        /* Data Management & Monitoring Section Styles */
+        #data-management {
+            background-color: #fce4ec; /* Light pink background */
+        }
+        #data-management h2 {
+            color: #c2185b; /* Dark pink text */
+        }
+        #data-management ul li {
+            margin: 10px 0;
+        }
+
+        /* Simulation & Planning Section Styles */
+        #simulation {
             background-color: #ffe0b2; /* Light orange background */
         }
-        #apsim h2 {
+        #simulation h2 {
             color: #e65100; /* Dark orange text */
         }
-        #apsim ul li {
+        #simulation ul li {
             margin: 10px 0;
         }
 
         /* Additional Projects Section Styles */
         #additional-projects {
-            background-color: #fce4ec; /* Light pink background */
+            background-color: #f9fbe7; /* Light lime background */
         }
         #additional-projects h2 {
-            color: #c2185b; /* Dark pink text */
+            color: #689f38; /* Dark lime text */
         }
         #additional-projects ul li {
             margin: 10px 0;
@@ -194,7 +205,12 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="open-source-projects.html">Open Source Projects</a></li>
+            <li><a href="#auto-steer">Auto Steer</a></li>
+            <li><a href="#spraying">Spraying</a></li>
+            <li><a href="#irrigation">Irrigation</a></li>
+            <li><a href="#data-management">Data Management</a></li>
+            <li><a href="#simulation">Simulation</a></li>
+            <li><a href="#additional-projects">Additional Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
             <!-- Add other navigation links as needed -->
         </ul>
@@ -206,14 +222,14 @@
         <p>Welcome to our collection of open-source projects dedicated to transforming agriculture. This platform brings together a diverse community of innovators, farmers, and tech enthusiasts committed to advancing agricultural practices through collaboration and shared knowledge. Explore contributions from around the world, join ongoing projects, or start your own to help foster sustainable and efficient farming solutions.</p>
     </section>
 
-    <!-- AgOpenGPS Repository Section -->
-    <section id="agopengps">
-        <h2>AgOpenGPS</h2>
-        <p>Welcome to AgOpenGPS, an open-source GPS guidance system for precision farming.</p>
+    <!-- Auto Steer Section -->
+    <section id="auto-steer">
+        <h2>Auto Steer</h2>
+        <p>Projects focused on automated steering systems for agricultural machinery, enhancing precision and efficiency in farming operations.</p>
         <ul>
             <li>
                 <a href="https://github.com/farmerbriantee/AgOpenGPS" target="_blank">AgOpenGPS Software</a>
-                <span class="difficulty-badge.beginner">Beginner</span>
+                <span class="difficulty-badge beginner">Beginner</span>
             </li>
             <li>
                 <a href="https://github.com/farmerbriantee/AgOpenGPS/wiki" target="_blank">AgOpenGPS Wiki</a>
@@ -227,27 +243,14 @@
                 <a href="https://github.com/AgHardware/Rate_Control" target="_blank">AgOpenGPS Rate Controller</a>
                 <span class="difficulty-badge intermediate">Intermediate</span>
             </li>
-            <!-- Add more repositories as needed -->
+            <!-- Add more auto steer repositories as needed -->
         </ul>
     </section>
 
-    <!-- Open Isobus Repository Section -->
-    <section id="open-isobus">
-        <h2>Open Isobus</h2>
-        <p>Explore Open Isobus, a comprehensive isobus implementation for agricultural machinery.</p>
-        <ul>
-            <li>
-                <a href="https://github.com/Open-Agriculture/AgIsoStack-plus-plus" target="_blank">AgIsoStack-plus-plus (Requires CMake)</a>
-                <span class="difficulty-badge advanced">Advanced</span>
-            </li>
-            <!-- Add more repositories as needed -->
-        </ul>
-    </section>
-
-    <!-- Open Weed Locator Section -->
-    <section id="open-weed-locator">
-        <h2>Open Weed Locator</h2>
-        <p>Welcome to the Open Weed Locator, a tool for precise weed identification and management.</p>
+    <!-- Spraying Section -->
+    <section id="spraying">
+        <h2>Spraying</h2>
+        <p>Projects related to automated spraying systems for precise application of fertilizers and pesticides, reducing waste and environmental impact.</p>
         <ul>
             <li>
                 <a href="https://github.com/geezacoleman/OpenWeedLocator" target="_blank">Open Weed Locator Repository</a>
@@ -265,14 +268,64 @@
                 <a href="https://github.com/cropcrusaders/open-weed-locator-hardware-boom-components" target="_blank">Open Weed Locator Boom Components (Under Development)</a>
                 <span class="difficulty-badge advanced">Advanced</span>
             </li>
-            <!-- Add more repositories as needed -->
+            <!-- Add more spraying repositories as needed -->
         </ul>
     </section>
 
-    <!-- Agricultural Production Systems sIMulator (APSIM) Section -->
-    <section id="apsim">
-        <h2>Agricultural Production Systems sIMulator (APSIM)</h2>
-        <p>Agricultural Production Systems sIMulator (APSIM) is a highly advanced simulator of agricultural systems.</p>
+    <!-- Irrigation Section -->
+    <section id="irrigation">
+        <h2>Irrigation</h2>
+        <p>Projects focused on automated and efficient irrigation systems to optimize water usage and enhance crop yields.</p>
+        <ul>
+            <li>
+                <a href="https://github.com/FarmBot/FarmBot-OS" target="_blank">FarmBot OS</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <a href="https://github.com/farmOS/farmOS" target="_blank">FarmOS GitHub Repository</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <a href="https://soilgrids.org/" target="_blank">SoilGrids Official Website</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <a href="https://github.com/AgroSense/AgroSense" target="_blank">AgroSense GitHub Repository</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <!-- Add more irrigation repositories as needed -->
+        </ul>
+    </section>
+
+    <!-- Data Management & Monitoring Section -->
+    <section id="data-management">
+        <h2>Data Management & Monitoring</h2>
+        <p>Projects that handle data collection, management, and monitoring to provide insights and improve decision-making in agriculture.</p>
+        <ul>
+            <li>
+                <a href="https://github.com/OpenAerialMap/OpenAerialMap" target="_blank">OpenAerialMap GitHub Repository</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <a href="https://github.com/AgriSense/AgriSense" target="_blank">AgriSense GitHub Repository</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <a href="https://github.com/AgOpenCV/AgOpenCV" target="_blank">AgOpenCV GitHub Repository</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap Official Website</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <!-- Add more data management & monitoring repositories as needed -->
+        </ul>
+    </section>
+
+    <!-- Simulation & Planning Section -->
+    <section id="simulation">
+        <h2>Simulation & Planning</h2>
+        <p>Projects that provide simulation tools and planning systems to model and optimize agricultural practices.</p>
         <ul>
             <li>
                 <a href="https://www.apsim.info/" target="_blank">APSIM Official Website</a>
@@ -282,7 +335,15 @@
                 <a href="https://github.com/APSIMInitiative/ApsimX" target="_blank">ApsimX GitHub Repository</a>
                 <span class="difficulty-badge intermediate">Intermediate</span>
             </li>
-            <!-- Add more repositories as needed -->
+            <li>
+                <a href="https://github.com/opensourceecology" target="_blank">OpenSource Ecology GitHub</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <a href="https://github.com/OpenAgInitiative/openag_brain" target="_blank">OpenAg Brain GitHub</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <!-- Add more simulation & planning repositories as needed -->
         </ul>
     </section>
 
@@ -298,19 +359,49 @@
                 <span class="difficulty-badge intermediate">Intermediate</span>
             </li>
             <li>
-                <strong>OpenAg</strong> - 
-                <a href="https://github.com/OpenAgInitiative/openag_brain" target="_blank">OpenAg Brain</a>
-                <span class="difficulty-badge advanced">Advanced</span>
-            </li>
-            <li>
-                <strong>OpenDroneMap</strong> - 
-                <a href="https://github.com/OpenDroneMap/OpenDroneMap" target="_blank">OpenDroneMap Repository</a>
+                <strong>FarmOS</strong> - 
+                <a href="https://github.com/farmOS/farmOS" target="_blank">FarmOS GitHub Repository</a>
                 <span class="difficulty-badge intermediate">Intermediate</span>
             </li>
             <li>
-                <strong>OpenSprinkler</strong> - 
-                <a href="https://github.com/OpenSprinkler/OpenSprinkler" target="_blank">OpenSprinkler Repository</a>
-                <span class="difficulty-badge beginner">Beginner</span>
+                <strong>SoilGrids</strong> - 
+                <a href="https://soilgrids.org/" target="_blank">SoilGrids Official Website</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <strong>OpenSource Ecology</strong> - 
+                <a href="https://github.com/opensourceecology" target="_blank">OpenSource Ecology GitHub</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <strong>OpenAg Brain</strong> - 
+                <a href="https://github.com/OpenAgInitiative/openag_brain" target="_blank">OpenAg Brain GitHub</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <strong>OpenAerialMap</strong> - 
+                <a href="https://github.com/OpenAerialMap/OpenAerialMap" target="_blank">OpenAerialMap GitHub Repository</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <strong>AgriSense</strong> - 
+                <a href="https://github.com/AgriSense/AgriSense" target="_blank">AgriSense GitHub Repository</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <strong>AgOpenCV</strong> - 
+                <a href="https://github.com/AgOpenCV/AgOpenCV" target="_blank">AgOpenCV GitHub Repository</a>
+                <span class="difficulty-badge advanced">Advanced</span>
+            </li>
+            <li>
+                <strong>OpenWeatherMap Agricultural Tools</strong> - 
+                <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap Official Website</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
+            </li>
+            <li>
+                <strong>AgroSense</strong> - 
+                <a href="https://github.com/AgroSense/AgroSense" target="_blank">AgroSense GitHub Repository</a>
+                <span class="difficulty-badge intermediate">Intermediate</span>
             </li>
             <!-- Add more projects as needed -->
         </ul>
