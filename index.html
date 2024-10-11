@@ -56,6 +56,11 @@
             padding: 10px;
             border-radius: 5px;
         }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -77,27 +82,27 @@
     <!-- About Crop Crusader Section -->
     <section id="about-crop-crusader">
         <h2>About Crop Crusader</h2>
-        <p>At Crop Crusader, we are pioneering a transformative approach to sustainable agriculture through open-source collaboration and innovation. Our initiative is dedicated to empowering farmers, agronomists, and communities worldwide by providing access to cutting-edge tools, resources, and knowledge that promote environmentally friendly and efficient farming practices.</p>
+        <p>At Crop Crusader, we're all about making farming better for everyone. We're here to help farmers and communities by sharing tools, knowledge, and practical solutions that make farming more efficient and sustainable. We keep things simple and share what works, so you can focus on what you do best: growing good crops.</p>
 
         <h3>Our Mission</h3>
-        <p>We aim to revolutionize the agricultural landscape by:</p>
+        <p>We're here to make farming better by:</p>
         <ul>
-            <li><strong>Promoting Sustainability:</strong> Encouraging farming methods that protect the environment, conserve natural resources, and enhance soil health.</li>
-            <li><strong>Empowering Communities:</strong> Providing open access to agricultural data, technologies, and best practices to enable informed decision-making.</li>
-            <li><strong>Fostering Innovation:</strong> Cultivating a collaborative platform where ideas can flourish, leading to groundbreaking solutions in sustainable farming.</li>
+            <li><strong>Protecting the Land:</strong> Using methods that keep the soil healthy, conserve water, and take care of the environment.</li>
+            <li><strong>Helping Communities:</strong> Sharing the best data, tools, and practices so everyone can make smart decisions on the farm.</li>
+            <li><strong>Encouraging New Ideas:</strong> Bringing farmers together to share ideas and come up with new ways to tackle challenges.</li>
         </ul>
 
         <h3>Why Choose Crop Crusader?</h3>
         <ul>
-            <li><strong>Open-Source Platform:</strong> We believe in the power of collective intelligence. Our open-source approach ensures that knowledge and innovations are shared freely, accelerating progress in sustainable agriculture.</li>
-            <li><strong>Community-Centric:</strong> We prioritize the needs of farmers and communities, tailoring solutions that are practical, scalable, and impactful.</li>
-            <li><strong>Global Impact:</strong> By uniting efforts across borders, we strive to address global challenges such as food security, climate change, and biodiversity loss.</li>
+            <li><strong>Open and Honest:</strong> We're all about sharing knowledge freely, so everyone benefits. No secrets, just progress.</li>
+            <li><strong>Farmer-Focused:</strong> We understand what farmers need, and we're here to provide practical tools that work in the real world.</li>
+            <li><strong>Making a Difference:</strong> By working together, we can tackle big issues like climate change and food security.</li>
         </ul>
 
         <h3>Join the Movement</h3>
-        <p>Become a part of a growing community committed to making a positive difference in the world. Whether you're a farmer, researcher, educator, or simply passionate about sustainable agriculture, Crop Crusader welcomes you.</p>
+        <p>Come join us and be part of something that makes a real difference. Whether you're working the land, doing research, teaching, or just interested in farming, there's a place for you here at Crop Crusader.</p>
 
-        <p><em>Together, let's cultivate a sustainable future and become true crusaders for the crops that feed the world.</em></p>
+        <p><em>Let's work together to grow a better future for everyone.</em></p>
     </section>
 
     <!-- Contact Section -->
@@ -113,8 +118,10 @@
         <p>Share your thoughts, questions, or insights in the forum below:</p>
         <form id="forumForm">
             <input type="text" id="username" placeholder="Your Name" required>
+            <span id="usernameError" class="error-message">Please enter your name.</span>
             <textarea id="comment" placeholder="Your Comment" rows="4" required></textarea>
-            <button type="button" onclick="addComment()">Submit Comment</button>
+            <span id="commentError" class="error-message">Please enter a comment.</span>
+            <button type="button" id="submitComment">Submit Comment</button>
         </form>
         
         <div class="comment-section" id="commentSection">
@@ -127,24 +134,49 @@
     </footer>
 
     <script>
-        function addComment() {
-            var username = document.getElementById('username').value;
-            var comment = document.getElementById('comment').value;
+        // Add an event listener to the submit button to trigger the addComment function when clicked
+        document.getElementById('submitComment').addEventListener('click', addComment);
 
+        // Function to add a comment to the forum section
+        function addComment() {
+            // Get the values of the username and comment fields, trimming any extra whitespace
+            var username = document.getElementById('username').value.trim();
+            var comment = document.getElementById('comment').value.trim();
+            // Get references to the error message elements
+            var usernameError = document.getElementById('usernameError');
+            var commentError = document.getElementById('commentError');
+
+            // Reset error messages to be hidden by default
+            usernameError.style.display = 'none';
+            commentError.style.display = 'none';
+
+            // If the username field is empty, display an error message
+            if (!username) {
+                usernameError.style.display = 'block';
+            }
+
+            // If the comment field is empty, display an error message
+            if (!comment) {
+                commentError.style.display = 'block';
+            }
+
+            // If both username and comment are provided, proceed to add the comment
             if (username && comment) {
+                // Get the comment section element where new comments will be added
                 var commentSection = document.getElementById('commentSection');
 
+                // Create a new div element to hold the comment
                 var newComment = document.createElement('div');
                 newComment.className = 'comment';
+                // Set the inner HTML of the new comment to include the username and comment text
                 newComment.innerHTML = '<strong>' + username + ':</strong> <p>' + comment + '</p>';
 
+                // Append the new comment to the comment section
                 commentSection.appendChild(newComment);
 
-                // Clear the form fields
+                // Clear the form fields after the comment has been added
                 document.getElementById('username').value = '';
                 document.getElementById('comment').value = '';
-            } else {
-                alert('Please enter your name and a comment.');
             }
         }
     </script>
