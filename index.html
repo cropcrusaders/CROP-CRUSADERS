@@ -169,7 +169,9 @@
                 var newComment = document.createElement('div');
                 newComment.className = 'comment';
                 // Set the inner HTML of the new comment to include the username and comment text
-                newComment.innerHTML = '<strong>' + username + ':</strong> <p>' + comment + '</p>';
+                var safeUsername = sanitize(username);
+                var safeComment = sanitize(comment);
+                newComment.innerHTML = '<strong>' + safeUsername + ':</strong> <p>' + safeComment + '</p>';
 
                 // Append the new comment to the comment section
                 commentSection.appendChild(newComment);
@@ -178,6 +180,13 @@
                 document.getElementById('username').value = '';
                 document.getElementById('comment').value = '';
             }
+        }
+
+        // Basic sanitization to prevent HTML injection
+        function sanitize(str) {
+            var temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
         }
     </script>
 </body>
