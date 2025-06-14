@@ -134,8 +134,23 @@
     </footer>
 
     <script>
+        // Load existing comments when the page loads
+        document.addEventListener('DOMContentLoaded', loadComments);
         // Add an event listener to the submit button to trigger the addComment function when clicked
         document.getElementById('submitComment').addEventListener('click', addComment);
+
+        // Retrieve comments from localStorage and display them
+        function loadComments() {
+            var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
+            var commentSection = document.getElementById('commentSection');
+            commentSection.innerHTML = '';
+            saved.forEach(function(c) {
+                var el = document.createElement('div');
+                el.className = 'comment';
+                el.innerHTML = '<strong>' + sanitize(c.username) + ':</strong> <p>' + sanitize(c.comment) + '</p>';
+                commentSection.appendChild(el);
+            });
+        }
 
         // Function to add a comment to the forum section
         function addComment() {
@@ -162,22 +177,30 @@
 
             // If both username and comment are provided, proceed to add the comment
             if (username && comment) {
-                // Get the comment section element where new comments will be added
                 var commentSection = document.getElementById('commentSection');
 
-                // Create a new div element to hold the comment
                 var newComment = document.createElement('div');
                 newComment.className = 'comment';
-                // Set the inner HTML of the new comment to include the username and comment text
-                newComment.innerHTML = '<strong>' + username + ':</strong> <p>' + comment + '</p>';
+                newComment.innerHTML = '<strong>' + sanitize(username) + ':</strong> <p>' + sanitize(comment) + '</p>';
 
-                // Append the new comment to the comment section
                 commentSection.appendChild(newComment);
+
+                // Save to localStorage
+                var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
+                saved.push({ username: username, comment: comment });
+                localStorage.setItem('forumComments', JSON.stringify(saved));
 
                 // Clear the form fields after the comment has been added
                 document.getElementById('username').value = '';
                 document.getElementById('comment').value = '';
             }
+        }
+
+        // Basic sanitization to prevent HTML injection
+        function sanitize(str) {
+            var temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
         }
     </script>
 </body>

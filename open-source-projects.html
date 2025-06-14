@@ -847,6 +847,20 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', loadComments);
+
+        function loadComments() {
+            var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
+            var commentSection = document.getElementById('commentSection');
+            commentSection.innerHTML = '';
+            saved.forEach(function(c) {
+                var el = document.createElement('div');
+                el.className = 'comment';
+                el.innerHTML = '<strong>' + sanitize(c.username) + ':</strong> <p>' + sanitize(c.comment) + '</p>';
+                commentSection.appendChild(el);
+            });
+        }
+
         function addComment() {
             var username = document.getElementById('username').value.trim();
             var comment = document.getElementById('comment').value.trim();
@@ -859,6 +873,10 @@
                 newComment.innerHTML = '<strong>' + sanitize(username) + ':</strong> <p>' + sanitize(comment) + '</p>';
 
                 commentSection.appendChild(newComment);
+
+                var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
+                saved.push({ username: username, comment: comment });
+                localStorage.setItem('forumComments', JSON.stringify(saved));
 
                 // Clear the form fields
                 document.getElementById('username').value = '';
