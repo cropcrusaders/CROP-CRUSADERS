@@ -18,6 +18,10 @@ You can view the website directly on your machine without any special setup:
    Then open your browser to [http://localhost:8000](http://localhost:8000) and navigate to `index.html`.
    
    You can also simply open the `index.html` file in your browser if you do not want to run a server.
+### Forum Usage
+
+Several pages include a lightweight forum. Comments are stored locally in your browser via `localStorage`, so they remain visible on future visits from the same device. No server setup is required.
+
 
 ### Using GitHub Pages
 

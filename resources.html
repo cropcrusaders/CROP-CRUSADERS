@@ -65,7 +65,7 @@
         <li><a href="https://extension.psu.edu/plants/crops" target="_blank">Penn State Extension - Crops</a></li>
         <li><a href="https://extension.uga.edu/topic-areas/crops-soils.html" target="_blank">University of Georgia Extension - Crops and Soils</a></li>
         <li><a href="https://ag.tennessee.edu/Pages/ans-crops.aspx" target="_blank">University of Tennessee Institute of Agriculture - Crops</a></li>
-        <li><a href="https://aglifesciences.tamu.edu/soilcrop/" target="_blank">Texas A&M AgriLife - Soil and Crop Sciences</a></li>
+        <li><a href="https://aglifesciences.tamu.edu/soilcrop/" target="_blank">Texas A&amp;M AgriLife - Soil and Crop Sciences</a></li>
         <li><a href="https://extension.colostate.edu/topic-areas/agriculture/" target="_blank">Colorado State University Extension - Agriculture</a></li>
     </ul>
 </section>
@@ -90,25 +90,25 @@
                     <span>★ ★ ★ ☆ ☆ (3.0)</span>
                 </li>
                  <li>
-                    <a href="" target="_blank">NPK Calculator for seeds per area (UNDER DEVELOPMENT)</a> 
+                    <a href="#" target="_blank">NPK Calculator for seeds per area (UNDER DEVELOPMENT)</a>
                     <span>★ ★ ★ ☆ ☆ (3.0)</span>
                 </li>
             </ul>
         </li>
         
         <!-- External Calculators -->
+        <!-- External Calculators -->
         <li>
             <strong>External Calculators:</strong>
             <ul>
-                
-                </li>
+                <!-- Add links to useful calculators here -->
             </ul>
         </li>
     </ul>
 </section>
 
 
-<section id="NDVI mapping">
+<section id="NDVI-mapping">
     <h2>NDVI Mapping</h2>
     <ul>
         <li>
@@ -266,10 +266,21 @@
 </section>
 
 
-    <!-- Community Forums Section -->
-    <section id="community-forums">
-        <h3>Community Forums:</h3>
-        <p>Join our <a href="index.html#forum">forum</a> to discuss and share knowledge with fellow enthusiasts.</p>
+    <!-- Forum Section -->
+    <section id="forum">
+        <h2>Forum</h2>
+        <p>Share your thoughts, questions, or insights in the forum below:</p>
+        <form id="forumForm">
+            <input type="text" id="username" placeholder="Your Name" required>
+            <span id="usernameError" class="error-message">Please enter your name.</span>
+            <textarea id="comment" placeholder="Your Comment" rows="4" required></textarea>
+            <span id="commentError" class="error-message">Please enter a comment.</span>
+            <button type="button" id="submitComment">Submit Comment</button>
+        </form>
+
+        <div class="comment-section" id="commentSection">
+            <!-- Comments will be displayed here -->
+        </div>
     </section>
 
     <!-- Return to Home link at the bottom -->
@@ -280,5 +291,6 @@
     <footer>
         <p>&copy; 2024 Crop Crusader Website</p>
     </footer>
+    <script src="forum.js"></script>
 </body>
 </html>

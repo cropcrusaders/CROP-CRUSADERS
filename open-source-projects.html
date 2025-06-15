@@ -332,57 +332,11 @@
         <form id="forumForm">
             <input type="text" id="username" placeholder="Your Name" required>
             <textarea id="comment" placeholder="Your Comment" rows="4" required></textarea>
-            <button type="button" onclick="addComment()">Submit Comment</button>
+            <button type="button" id="submitComment">Submit Comment</button>
         </form>
         
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', loadComments);
-
-        function loadComments() {
-            var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
-            var commentSection = document.getElementById('commentSection');
-            commentSection.innerHTML = '';
-            saved.forEach(function(c) {
-                var el = document.createElement('div');
-                el.className = 'comment';
-                el.innerHTML = '<strong>' + sanitize(c.username) + ':</strong> <p>' + sanitize(c.comment) + '</p>';
-                commentSection.appendChild(el);
-            });
-        }
-
-        function addComment() {
-            var username = document.getElementById('username').value.trim();
-            var comment = document.getElementById('comment').value.trim();
-
-            if (username && comment) {
-                var commentSection = document.getElementById('commentSection');
-
-                var newComment = document.createElement('div');
-                newComment.className = 'comment';
-                newComment.innerHTML = '<strong>' + sanitize(username) + ':</strong> <p>' + sanitize(comment) + '</p>';
-
-                commentSection.appendChild(newComment);
-
-                var saved = JSON.parse(localStorage.getItem('forumComments')) || [];
-                saved.push({ username: username, comment: comment });
-                localStorage.setItem('forumComments', JSON.stringify(saved));
-
-                // Clear the form fields
-                document.getElementById('username').value = '';
-                document.getElementById('comment').value = '';
-            } else {
-                alert('Please enter your name and a comment.');
-            }
-        }
-
-        // Basic sanitization to prevent HTML injection
-        function sanitize(str) {
-            var temp = document.createElement('div');
-            temp.textContent = str;
-            return temp.innerHTML;
-        }
-    </script>
+    <script src="forum.js"></script>
 </body>
 </html>
