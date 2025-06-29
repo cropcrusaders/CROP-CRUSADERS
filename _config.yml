@@ -1,15 +1,15 @@
 # Site Settings
-title: My GitHub Pages Site
+title: Crop Crusader Website
 description: >- # this means to break the string into multiple lines
   A simple GitHub Pages site created using Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog (leave empty for root)
-url: "https://username.github.io" # the base hostname & protocol for your site
+url: "https://cropcrusaders.github.io" # the base hostname & protocol for your site
 theme: jekyll-theme-cayman # default theme
 
 # Author Settings
 author:
-  name: John Doe
-  email: johndoe@example.com
+  name: Crop Crusaders
+  email: contact@cropcrusader.com
 
 # Navigation Links (for custom navigation)
 navigation:
